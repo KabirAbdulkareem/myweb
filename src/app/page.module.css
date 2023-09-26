@@ -38,3 +38,20 @@
   width: max-content;
   color: white;
 }
+
+/* Define the animation */
+@keyframes moveUpDown {
+  0% {
+      transform: translateY(0); /* Start position (no vertical movement) */
+  }
+  50% {
+      transform: translateY(-20px); /* Move up by 10 pixels */
+  }
+  100% {
+      transform: translateY(0); /* Return to the start position */
+  }
+}
+
+.item:nth-child(2) {
+  animation: moveUpDown 5s linear infinite;
+}
