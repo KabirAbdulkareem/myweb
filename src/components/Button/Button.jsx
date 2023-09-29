@@ -4,8 +4,8 @@ import styles from './button.module.css'
 
 const Button = ({ url, text }) => {
   return (
-    <Link href={url}>
-      <button className={styles.container}>{text}</button>
+    <Link href={url} className={styles.container}>
+      <button className={styles.btn}>{text}</button>
     </Link>
   );
 };
