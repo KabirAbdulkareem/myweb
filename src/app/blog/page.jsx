@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
 
-async function getData() {
+const getData = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
     cache: "no-store",
   });
@@ -15,7 +15,8 @@ async function getData() {
     throw new Error("Failed to fetch data");
   }
 
-  return res.json();
+  const data = await res.json();
+  return data;
 }
 
 const Blog = async () => {
